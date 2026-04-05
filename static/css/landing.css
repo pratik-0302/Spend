@@ -1,0 +1,144 @@
+/* ------------------------------------------------------------------ */
+/* Hero — dark cinematic override (landing page only)                  */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem 0;
+    background: #07070f;
+    overflow: hidden;
+    /* reset the 2-col grid from style.css */
+    grid-template-columns: unset;
+    gap: unset;
+}
+
+/* Purple radial glow */
+.hero-glow {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse at center, rgba(109, 40, 217, 0.45) 0%, rgba(109, 40, 217, 0.12) 45%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.hero .hero-badge {
+    background: rgba(109, 40, 217, 0.18);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    margin-bottom: 2rem;
+}
+
+.hero .hero-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    color: #ffffff;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero .hero-title em {
+    font-style: italic;
+    color: #ffffff;
+}
+
+.hero .hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+}
+
+.hero-actions {
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.btn-hero-cta {
+    display: inline-block;
+    background: #7c3aed;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 28px rgba(124, 58, 237, 0.5);
+}
+
+.btn-hero-cta:hover {
+    background: #6d28d9;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.7);
+}
+
+/* Floating dashboard preview */
+.hero-preview {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hero-preview .mock-card {
+    background: #12121e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px 20px 0 0;
+    box-shadow:
+        0 -4px 40px rgba(124, 58, 237, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    padding: 2.5rem 2.5rem 3rem;
+    max-width: 100%;
+}
+
+.hero-preview .mock-card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.hero-preview .mock-label {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-preview .mock-total {
+    color: #ffffff;
+}
+
+.hero-preview .mock-cat {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.hero-preview .mock-bar-track {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-preview .mock-amt {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                           */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero { padding: 4rem 1rem 0; }
+    .hero-glow { width: 380px; height: 300px; }
+    .hero-preview .mock-card { padding: 1.5rem 1.25rem 2rem; }
+}
