@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block content %}
+<section class="terms-section">
+    <div class="terms-container">
+        <div class="terms-header">
+            <div class="hero-badge">Legal</div>
+            <h1 class="terms-title">Privacy Policy</h1>
+            <p class="terms-meta">Last updated: April 5, 2026</p>
+        </div>
+
+        <div class="terms-card">
+            <div class="terms-block">
+                <h2 class="terms-heading">1. Data We Collect</h2>
+                <p class="terms-body">When you create an account, we collect your name and email address. When you use Spendly, we collect the expense data you enter — including amounts, categories, dates, and descriptions. We do not collect payment information or any data beyond what is necessary to provide the service.</p>
+            </div>
+
+            <div class="terms-block">
+                <h2 class="terms-heading">2. How We Use Your Data</h2>
+                <p class="terms-body">Your data is used solely to provide and improve the Spendly service. This includes displaying your expense history, generating summaries, and maintaining your account. We do not use your data for advertising, profiling, or any purpose unrelated to the core functionality of the app.</p>
+            </div>
+
+            <div class="terms-block">
+                <h2 class="terms-heading">3. Data Storage</h2>
+                <p class="terms-body">Your data is stored securely on our servers. We take reasonable technical and organisational measures to protect your information against unauthorised access, loss, or misuse. Your data is retained for as long as your account is active. You may request deletion of your account and all associated data at any time.</p>
+            </div>
+
+            <div class="terms-block">
+                <h2 class="terms-heading">4. Third Party Services</h2>
+                <p class="terms-body">Spendly does not sell or share your personal data with third parties. We may use trusted infrastructure providers to host and operate the service, but these providers are bound by confidentiality obligations and do not have access to your financial data for their own purposes.</p>
+            </div>
+
+            <div class="terms-block">
+                <h2 class="terms-heading">5. Contact Us</h2>
+                <p class="terms-body">If you have any questions or concerns about this Privacy Policy or how your data is handled, please reach out to us. We are committed to addressing any privacy-related questions promptly and transparently.</p>
+            </div>
+        </div>
+
+        <div class="terms-back">
+            <a href="{{ url_for('landing') }}" class="btn-ghost">← Back to home</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
